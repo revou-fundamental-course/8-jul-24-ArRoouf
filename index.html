@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container" id="container">
+      <section class="form-container bmi-input">
+        <form id="bmiForm">
+          <h1>Hitung BMI</h1>
+          <p>Masukkan data Anda</p>
+          <select id="gender" name="gender" required>
+            <option value="male">Laki-laki</option>
+            <option value="female">Perempuan</option>
+          </select>
+          <input
+            type="number"
+            placeholder="Tinggi Badan (cm)"
+            id="height"
+            required
+            step="0.1"
+          />
+          <input
+            type="number"
+            placeholder="Berat Badan (kg)"
+            id="weight"
+            required
+            step="0.1"
+          />
+          <button type="submit">Hitung BMI</button>
+        </form>
+      </section>
+      <section class="form-container bmi-result">
+        <article>
+          <h1 id="bmiValue"></h1>
+          <p id="bmiCategory"></p>
+          <p id="bmiExplanation"></p>
+          <button type="button" id="recalculateBtn">Hitung Ulang</button>
+        </article>
+      </section>
+      <aside class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h2>Hasil BMI Anda!</h2>
+            <p>Lihat hasil perhitungan BMI dan interpretasinya di sini</p>
+            <button class="hidden" id="resultBtn"></button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h2>Halo!</h2>
+            <p>Masukkan data Anda untuk menghitung BMI</p>
+            <button class="hidden" id="inputBtn"></button>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
